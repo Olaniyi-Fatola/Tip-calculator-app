@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: hsl(172, 67%, 45%);
+    --green-900: hsl(183, 100%, 15%);
+    --grey-500:hsl(186, 14%, 43%);
+    --grey-400:hsl(184, 14%, 56%);
+    --grey-200:hsl(185, 41%, 84%);
+    --grey-50:hsl(189, 47%, 97%);
+    --white: hsl(0, 100%, 100%);
+}
+
+body{
+    display: grid;
+    place-items: center;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    background-color: var(--grey-200);
+    color: var(--grey-400);
+    min-height: 100dvh;
+    font-size: 1.2rem;
+}
+
+h1{
+    place-self: center;
+    color: var(--grey-500);
+    margin:2rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+}
+
+.container{
+    width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    place-items: center;
+    justify-self: end;
+    background-color: var(--white);
+    border-start-start-radius: 2rem;
+    border-start-end-radius: 2rem;
+}
+
+.billing {
+    display: grid;
+    gap: 0.5rem;
+    margin-block-end: 2rem;
+}
+.bill{
+    height: 3rem;
+    background-image: url('images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 1rem center;
+    background-color: var(--grey-50);
+    border-radius: 0.5rem;
+    border-style: none;
+    font-size: 1.5rem;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+    color: var(--green-900);
+}
+
+.selecttip{
+    display: grid;
+    gap: 1rem;
+    margin-block-end: 2rem;
+}
+.button{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.percent{
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 0.5rem;
+    background-color: var(--green-900);
+    color: var(--white);
+    border-style: none;
+    text-align: center;
+}
+.percent:active, .percent:hover{
+    background-color: var(--primary);
+    color: var(--green-900);
+}
+#tip{
+    background-color: var(--grey-50);
+}
+
+.peopleNo{
+    display: grid;
+    margin-block-end: 2rem;
+}
+.people{
+    height: 3rem;
+    background-image: url('images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 1rem center;
+    background-color: var(--grey-50);
+    border-radius: 0.5rem;
+    border-style: none;
+    font-size: 1.5rem;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+    color: var(--green-900);
+}
+
+.tipbox{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--green-900);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.tip{
+    display:flex;
+    padding-block-end: 2rem;
+    line-height: 1;
+    justify-content: space-between;
+}
+h2{
+    font-size: 1.3rem;
+    color: var(--white);
+}
+p{
+    font-size: 1rem;
+}
+h3{
+    font-size: 2rem;
+    color: var(--primary);
+
+}
+
+.reset{
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    border-style: none;
+    font-size: 1.5rem;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    background-color: var(--primary);
+    opacity: 20%;
+    color: var(--green-900);
+}
+.reset:active, .reset:hover{
+    opacity: 100%;
+}

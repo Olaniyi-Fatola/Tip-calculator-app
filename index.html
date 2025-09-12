@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tip-calculator-app</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>SPLI<br>TTER</h1>
+        <div class="container">
+            <form action="">
+                <div class="billing">
+                <label for="bill">Bill</label>
+                <input id="bill" class="bill" type="number" name="bill"></div>
+                <div class="selecttip">
+                    <label class="percentage" for="tip">Select Tip %</label>
+                    <div class="button">
+                    <button type="button" class="percent">5%</button>
+                    <button type="button" class="percent">10%</button>
+                    <button type="button" class="percent">15%</button>
+                    <button type="button" class="percent">25%</button>
+                    <button type="button" class="percent">50%</button>
+                    <input class="percent" id="tip" type="number" placeholder="Custom"></div>
+                </div>
+                <div class="peopleNo">
+                <label for="people">Number of People</label>
+                <input class="people" id="people" type="number" name="peoplecount"></div>
+            </form>
+
+            <div class="tipbox">
+                <div class="tip">
+                    <div class="amount">
+                        <h2>Tip Amount</h2>
+                        <p>/ person</p>
+                    </div>
+                    <h3>$4.27</h3>
+                </div>
+
+                <div class="tip">
+                    <div class="amount">
+                        <h2>Tip Amount</h2>
+                        <p>/ person</p>
+                    </div>
+                    <h3>$4.27</h3>
+                </div>
+                <button class="reset" type="reset">RESET</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
