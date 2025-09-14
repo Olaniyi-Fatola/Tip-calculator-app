@@ -40,7 +40,7 @@ h1{
     width: 100vw;
     height: 100%;
     box-sizing: border-box;
-    padding: 2rem;
+    padding: clamp(2rem, 1.4718rem + 2.2535vw, 3.5rem);
     place-items: center;
     justify-self: end;
     background-color: var(--white);
@@ -51,7 +51,7 @@ h1{
 .billing {
     display: grid;
     gap: 0.5rem;
-    margin-block-end: 2rem;
+    margin-block-end: clamp(2rem, 1.4718rem + 2.2535vw, 3.5rem);
 }
 .bill{
     height: 3rem;
@@ -68,11 +68,18 @@ h1{
     text-align: right;
     color: var(--green-900);
 }
+.bill:focus{
+    outline: none;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: var(--primary);
+    caret-color: var(--primary);
+}
 
 .selecttip{
     display: grid;
     gap: 1rem;
-    margin-block-end: 2rem;
+    margin-block-end: clamp(2rem, 1.4718rem + 2.2535vw, 3.5rem);;
 }
 .button{
     display: grid;
@@ -92,19 +99,29 @@ h1{
     border-style: none;
     text-align: center;
 }
-.percent:active, .percent:hover{
+.percent:focus, .percent:hover{
     background-color: var(--primary);
     color: var(--green-900);
 }
 #tip{
     background-color: var(--grey-50);
+    text-align: right;
+    color: var(--green-900);
+}
+#tip:focus {
+    outline: none;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: var(--primary);
+    caret-color: var(--primary);
 }
 
-.peopleNo{
+#peopleNo{
     display: grid;
-    margin-block-end: 2rem;
+    margin-block-end: clamp(2rem, 1.4718rem + 2.2535vw, 3.5rem);;
+    gap: 1rem;
 }
-.people{
+#people{
     height: 3rem;
     background-image: url('images/icon-person.svg');
     background-repeat: no-repeat;
@@ -118,6 +135,29 @@ h1{
     font-style: normal;
     text-align: right;
     color: var(--green-900);
+}
+#people:focus {
+    outline: none;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: var(--primary);
+    caret-color: var(--primary);
+}
+#people.error:focus {
+    border-color: red;
+}
+.error{
+    display: flex;
+    justify-content: space-between;
+}
+#content{
+    display: none;
+    color: red;
+    font-size: clamp(0.7rem, 0.5239rem + 0.7512vw, 1.2rem);
+    place-self: center;
+}
+#content.error{
+    display: block;
 }
 
 .tipbox{
@@ -159,6 +199,56 @@ h3{
     opacity: 20%;
     color: var(--green-900);
 }
-.reset:active, .reset:hover{
+.reset:focus, .reset:hover{
     opacity: 100%;
+}
+
+@media (min-width: 43rem) {
+    .container{
+        width: 80vw;
+        height: 80%;
+        margin: 2rem;
+        place-self: center;
+        border-radius: 1rem;
+    }
+    .button{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (min-width: 61rem) {
+    .container{
+        display: flex;
+        width: 80vw;
+        height: 36rem;
+        margin: 2rem;
+        place-self: center;
+        border-radius: 1rem;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    form{
+        margin-inline: 2rem;
+    }
+    .button{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .tipbox{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: var(--green-900);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+    .tip{
+        margin-block: 2rem;
+    }
+    .reset{
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+        right: center;
+        margin-block: 2rem;
+    }
 }

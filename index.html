@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images\favicon-32x32.png" type="image/x-icon">
     <title>Tip-calculator-app</title>
 </head>
 <body>
@@ -12,21 +13,26 @@
         <div class="container">
             <form action="">
                 <div class="billing">
-                <label for="bill">Bill</label>
-                <input id="bill" class="bill" type="number" name="bill"></div>
+                    <label for="bill">Bill</label>
+                    <input id="bill" class="bill" type="number" name="bill">
+                </div>
                 <div class="selecttip">
                     <label class="percentage" for="tip">Select Tip %</label>
                     <div class="button">
-                    <button type="button" class="percent">5%</button>
-                    <button type="button" class="percent">10%</button>
-                    <button type="button" class="percent">15%</button>
-                    <button type="button" class="percent">25%</button>
-                    <button type="button" class="percent">50%</button>
-                    <input class="percent" id="tip" type="number" placeholder="Custom"></div>
+                    <button type="button" id="fiveperc" class="percent">5%</button>
+                    <button type="button" id="tenperc" class="percent">10%</button>
+                    <button type="button" id="fifteenperc" class="percent">15%</button>
+                    <button type="button" id="twentyfiveperc" class="percent">25%</button>
+                    <button type="button" id="fiftyperc" class="percent">50%</button>
+                    <input class="percent" type="number" id="tip" placeholder="Custom"></div>
                 </div>
-                <div class="peopleNo">
-                <label for="people">Number of People</label>
-                <input class="people" id="people" type="number" name="peoplecount"></div>
+                <div id="peopleNo">
+                    <div class="error">
+                        <label for="people">Number of People</label>
+                        <p id="content">can't be zero</p>
+                    </div>
+                    <input id="people" type="number" name="peoplecount">
+                </div>
             </form>
 
             <div class="tipbox">
@@ -35,19 +41,21 @@
                         <h2>Tip Amount</h2>
                         <p>/ person</p>
                     </div>
-                    <h3>$4.27</h3>
+                    <h3 id="tipperperson">$0.00</h3>
                 </div>
 
                 <div class="tip">
                     <div class="amount">
-                        <h2>Tip Amount</h2>
+                        <h2>Total</h2>
                         <p>/ person</p>
                     </div>
-                    <h3>$4.27</h3>
+                    <h3 id="total">$0.00</h3>
                 </div>
                 <button class="reset" type="reset">RESET</button>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
